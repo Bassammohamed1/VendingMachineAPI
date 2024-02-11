@@ -1,0 +1,10 @@
+﻿namespace TheTask.DTOS
+{
+    public class UpdatedUserDTO
+    {
+        public string UserName { get; set; }
+        public string Password { get; set; }
+        public Double? Deposit { get; set; }
+        public string Role { get; set; }
+    }
+}
