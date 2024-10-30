@@ -1,7 +1,40 @@
-I used C#12 & .Net 8 with EF 8 and microsoft identity.
-The API has two controllers one for user and it's name is accountcontroller and the other is for products and it's name is productscontroller.
-The accountcontroller has the CRUD operation for the user and (deposit, buy and reset) for the buyer user.
-The productscontroller has the CRUD operation for the products an the seller can access this endpoints.
-The API has three roles admin, seller and buyer.
-Admin can access any endpoint, seller can acess all products endpoints, buyer can acess deposit, buy and reset endpoints.
-Any one can acess view products, register and login endpoints.
+# Vending Machine API
+
+This API provides functionalities for managing accounts and products within a vending machine system. The API supports operations like user registration, login, account management, product management, and purchase functionalities.
+
+## Overview
+
+The Vending Machine API allows you to:
+- Manage user accounts, including registration, login, deposits, and purchases.
+- Manage products, including adding, updating, and deleting products.
+- Interact with the API to simulate the functionality of a vending machine.
+
+## Endpoints
+
+### Account Endpoints
+
+| Method | Endpoint                       | Description                 |
+|--------|--------------------------------|-----------------------------|
+| GET    | `/api/Account/AllUsers`        | Get all users               |
+| GET    | `/api/Account/User/{id}`       | Get a user by ID            |
+| POST   | `/api/Account/Register`        | Register a new user         |
+| POST   | `/api/Account/Login`           | Log in an existing user     |
+| PUT    | `/api/Account/UpdateUser/{id}` | Update user details         |
+| DELETE | `/api/Account/DeleteUser/{id}` | Delete a user               |
+| POST   | `/api/Account/Deposit/{id}`    | Deposit funds               |
+| POST   | `/api/Account/Reset/{id}`      | Reset account details       |
+| POST   | `/api/Account/Buy/{id}`        | Buy a product               |
+
+### Product Endpoints
+
+| Method | Endpoint                              | Description                      |
+|--------|---------------------------------------|----------------------------------|
+| GET    | `/api/Products/AllProducts`           | Get all products                 |
+| GET    | `/api/Products/ProductById/{id}`      | Get a product by ID              |
+| GET    | `/api/Products/ProductByName/{name}`  | Get a product by name            |
+| POST   | `/api/Products/AddProduct`            | Add a new product                |
+| PUT    | `/api/Products/UpdateProduct/{id}`    | Update product details           |
+| DELETE | `/api/Products/DeleteProduct/{id}`    | Delete a product                 |
+
+## Image
+ <img src="images/1.png" alt="Alt text" width="100%" height="100%">
