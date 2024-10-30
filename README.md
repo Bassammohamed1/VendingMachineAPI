@@ -36,5 +36,12 @@ The Vending Machine API allows you to:
 | PUT    | `/api/Products/UpdateProduct/{id}`    | Update product details           |
 | DELETE | `/api/Products/DeleteProduct/{id}`    | Delete a product                 |
 
+## Technologies Used
+
+    C#
+    SQL Server
+    .NET
+    ASP.Net Core WebAPI
+
 ## Image
  <img src="images/1.png" alt="Alt text" width="100%" height="100%">
