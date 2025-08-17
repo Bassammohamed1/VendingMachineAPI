@@ -1,39 +1,94 @@
-# 🚇 Metro Lines & Stations API
+# Vending Machine API
 
-A RESTful API designed to manage **metro lines and stations**, providing efficient tools for urban mobility applications.  
-Developed using **ASP.NET Core, EF Core, and SQL Server**, it supports advanced features such as **station lookup, nearest station detection, and travel path calculations** with time and cost estimates.
+This project is a **.NET Web API** that provides functionalities for managing accounts and products within a vending machine system.  
+It follows a **3-Tier Architecture** (Presentation Layer, Business Logic Layer, Data Access Layer) to ensure scalability, maintainability, and separation of concerns.
 
----
+## Features
 
-## 🚀 Features
-- **Line & Station Management**: Create, update, and retrieve metro lines and stations.  
-- **Travel Path Calculation**: Compute optimal routes with estimated time and cost.  
-- **Nearest Station Detection**: Locate the closest station based on user input.  
-- **Secure Access**: JWT-based authentication.  
-- **Interactive Documentation**: Swagger UI integration.  
+- **User Management**
+  - Registration
+  - Login (with authentication)
+  - Account management
 
----
+- **Product Management**
+  - Add, update, delete products
+  - View available products
 
-## 🧪 Testing
-- **Unit Testing** with xUnit for core functionalities.  
-- **In-Memory DB (EF Core)** for isolated, repeatable test cases.  
-- **FakeItEasy** for mocking dependencies and ensuring reliable independent tests.  
+- **Purchase Functionalities**
+  - Buy products
+  - Track user balance
+  - Deduct balance after purchase
 
----
+## Architecture
 
-## 🛠 Tech Stack
-- **Backend**: ASP.NET Core, C#  
-- **Database**: SQL Server, EF Core  
-- **Authentication**: JWT  
-- **Docs**: Swagger  
-- **Testing**: xUnit, FakeItEasy  
+The project uses a **3-Tier Architecture**:
 
----
+- **Presentation Layer (API Layer):** Handles HTTP requests and responses.  
+- **Business Logic Layer (BLL):** Contains core business rules and logic.  
+- **Data Access Layer (DAL):** Manages interaction with the database using repositories.  
 
-## 📜 Usage
-1. Use Swagger UI to explore endpoints.  
-2. Authenticate with JWT for secured requests.  
-3. Retrieve, create, or update lines and stations.  
-4. Test route calculation and nearest station APIs.  
+This separation ensures modularity and makes the system easier to extend and maintain.
 
----
+## Technologies Used
+
+- **.NET 8 Web API**
+- **Entity Framework Core**
+- **SQL Server**
+- **C#**
+- **JWT Authentication** (if used)
+
+## Getting Started
+
+### Prerequisites
+- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+- SQL Server
+
+### Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/vending-machine-api.git
+
+    Navigate to the project directory:
+
+cd vending-machine-api
+
+Update the database connection string in appsettings.json.
+
+Apply migrations:
+
+dotnet ef database update
+
+Run the application:
+
+    dotnet run
+
+API Endpoints
+Authentication
+
+    POST /api/auth/register – Register a new user
+
+    POST /api/auth/login – Login and retrieve JWT
+
+Users
+
+    GET /api/users/{id} – Get user by ID
+
+    PUT /api/users/{id} – Update user details
+
+Products
+
+    GET /api/products – Get all products
+
+    POST /api/products – Add a new product
+
+    PUT /api/products/{id} – Update product
+
+    DELETE /api/products/{id} – Delete product
+
+Purchases
+
+    POST /api/purchase – Buy a product
+
+License
+
+This project is licensed under the MIT License.
